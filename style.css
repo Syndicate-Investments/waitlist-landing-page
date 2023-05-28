@@ -1,0 +1,175 @@
+body {
+    background-image: url('./assets/ashwini-chaudhary-monty-WSNy4Z7dwPw-unsplash.jpg');
+    background-size: cover;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Lato';
+    font-weight: 200;
+    background: -webkit-linear-gradient(#656565, #2e2d2d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    
+}
+
+.part1 {
+    display: inline-block;
+    background: -webkit-linear-gradient(#242424, #7e7e7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .part2 {
+    display: inline-block;
+    background: -webkit-linear-gradient(rgb(253, 139, 33), rgb(87, 104, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+ form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  input[type="text"] {
+    background-color: #000000;
+    color: #fffefe;
+    border: 1px solid #333333;
+    padding: 10px;
+    margin: 5px 0;
+    width: 200px;  /* Adjust as per your requirement */
+    height: 30px;
+    width: 320px;
+    border-radius: 5px;
+    transition: border 0.5s ease-in-out;
+
+  }
+
+  input[type="text"]:focus {
+    border: 1px solid #666666;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #333333;
+    opacity: 1; /* Firefox */
+  }
+  
+  button {
+    background-color: #141414;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    height: 50px;
+    width: 340px;  /* Adjust as per your requirement */
+    border-radius: 5px;
+  }
+
+  .glow-on-hover {
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #111111;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(46, 46, 46);
+    width: 50%;
+    font-family: 'Lato';
+    color: white;
+
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+
+  
